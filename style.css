@@ -158,6 +158,9 @@
       margin-bottom: 36px;
       animation: fadeUp 0.7s ease 0.3s both;
     }
+    .animate-btns {
+      animation: fadeUp 0.7s ease 0.4s both;
+    }
     .btn-primary-custom {
       background: var(--accent);
       color: #000;
@@ -394,11 +397,77 @@
 
     /* === SKILLS === */
     #skills { padding: 100px 0; }
-    .skills-tab-btn {
+
+    .skill-category {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      transition: border-color 0.3s;
+    }
+    .skill-category:hover { border-color: rgba(0,245,196,0.3); }
+
+    .skill-category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .skill-cat-icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(0,245,196,0.08);
+      border: 1px solid rgba(0,245,196,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+    .skill-cat-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .skill-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: default;
+      transition: all 0.25s;
+      user-select: none;
+    }
+    .skill-tag-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(0,245,196,0.05);
+      transform: translateY(-2px);
+    }
+    .skill-tag-icon { font-size: 1rem; line-height: 1; }
+
+    /* === PROJECTS === */
+    #projects { padding: 100px 0; background: var(--surface); }
+
+    .proj-filter-btn {
       background: var(--card);
       border: 1px solid var(--border);
       color: var(--muted);
-      padding: 10px 22px;
+      padding: 10px 24px;
       border-radius: 8px;
       font-family: var(--font-mono);
       font-size: 0.8rem;
@@ -406,58 +475,12 @@
       transition: all 0.3s;
       letter-spacing: 1px;
     }
-    .skills-tab-btn.active, .skills-tab-btn:hover {
+    .proj-filter-btn.active, .proj-filter-btn:hover {
       background: rgba(0,245,196,0.1);
       border-color: var(--accent);
       color: var(--accent);
     }
-    .skill-item {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 18px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      transition: all 0.3s;
-    }
-    .skill-item:hover { border-color: var(--accent); transform: translateX(4px); }
-    .skill-left { display: flex; align-items: center; gap: 12px; }
-    .skill-icon {
-      width: 36px; height: 36px;
-      border-radius: 8px;
-      background: rgba(0,245,196,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-    }
-    .skill-name { font-weight: 600; font-size: 0.95rem; }
-    .skill-bar-wrap {
-      flex: 1;
-      height: 4px;
-      background: var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-      max-width: 150px;
-    }
-    .skill-bar-fill {
-      height: 100%;
-      border-radius: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      transition: width 1.2s ease;
-    }
-    .skill-pct {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--accent);
-      min-width: 36px;
-      text-align: right;
-    }
-
-    /* === PROJECTS === */
-    #projects { padding: 100px 0; background: var(--surface); }
+    .proj-item.hidden { display: none; }
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);

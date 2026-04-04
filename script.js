@@ -47,14 +47,18 @@ $(function () {
   }
   revealOnScroll();
 
-  /* ---- Skills tabs ---- */
-  $('#skillTabs .skills-tab-btn').on('click', function () {
-    var tab = $(this).data('tab');
-    $('#skillTabs .skills-tab-btn').removeClass('active');
+  /* ---- Project filters ---- */
+  $('#projectFilters .proj-filter-btn').on('click', function () {
+    var filter = $(this).data('filter');
+    $('#projectFilters .proj-filter-btn').removeClass('active');
     $(this).addClass('active');
-    $('.skill-panel').addClass('d-none');
-    $('#tab-' + tab).removeClass('d-none');
-    // Re-trigger reveal
+    $('.proj-item').each(function () {
+      if (filter === 'all' || $(this).data('category') === filter) {
+        $(this).removeClass('hidden');
+      } else {
+        $(this).addClass('hidden');
+      }
+    });
     setTimeout(revealOnScroll, 50);
   });
 

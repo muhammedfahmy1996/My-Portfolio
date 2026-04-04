@@ -63,10 +63,10 @@
           frontends to rock-solid backends.
         </p>
         <div class="d-flex flex-wrap gap-3 animate-btns">
-          <a href="#projects" class="btn-primary-custom"> 
+          <a href="#projects" class="btn-primary-custom" onclick="event.preventDefault(); document.querySelector('#projects').scrollIntoView({behavior:'smooth'});"> 
              <i class="fas fa-folder-open"></i> View My Work
           </a>
-          <a href="Mohamed_Fahmy_cv ( SEP 2025 ).docx" download class="btn-outline-custom">
+          <a href="Mohamed_Fahmy_cv(SEP 2025).docx" target="_blank" class="btn-outline-custom">
             <i class="fas fa-download"></i> Download CV
           </a>
         </div>
@@ -198,59 +198,70 @@
       <div class="section-line"></div>
     </div>
 
-    <!-- Tabs -->
-    <div class="d-flex flex-wrap gap-2 mb-5 reveal" id="skillTabs">
-      <button class="skills-tab-btn active" data-tab="frontend"><i class="fas fa-palette me-2"></i>Front-End</button>
-      <button class="skills-tab-btn" data-tab="backend"><i class="fas fa-server me-2"></i>Back-End</button>
-      <button class="skills-tab-btn" data-tab="lang"><i class="fas fa-code me-2"></i>Languages</button>
-      <button class="skills-tab-btn" data-tab="data"><i class="fas fa-database me-2"></i>Data & Database</button>
-    </div>
-
     <!-- Front-End -->
-    <div class="skill-panel" id="tab-frontend">
-      <div class="row g-3">
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">⚛️</div><span class="skill-name">React.js</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:80%"></div></div><span class="skill-pct">80%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🖼️</div><span class="skill-name">Vue.js</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🎨</div><span class="skill-name">HTML & CSS</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:95%"></div></div><span class="skill-pct">95%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🅱️</div><span class="skill-name">Bootstrap</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:92%"></div></div><span class="skill-pct">92%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🌪️</div><span class="skill-name">jQuery</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">💛</div><span class="skill-name">JavaScript</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div></div>
+    <div class="skill-category reveal">
+      <div class="skill-category-header">
+        <span class="skill-cat-icon"><i class="fas fa-palette"></i></span>
+        <span class="skill-cat-title">Front-End</span>
+      </div>
+      <div class="skill-tags-wrap">
+        <div class="skill-tag-pill"><span class="skill-tag-icon">⚛️</span> React.js</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🖼️</span> Vue.js</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🎨</span> HTML & CSS</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🅱️</span> Bootstrap</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🌪️</span> jQuery</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">💛</span> JavaScript</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🌊</span> Tailwind CSS</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">▲</span> Next.js</div>
       </div>
     </div>
 
     <!-- Back-End -->
-    <div class="skill-panel d-none" id="tab-backend">
-      <div class="row g-3">
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🟢</div><span class="skill-name">Node.js</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🚂</div><span class="skill-name">Express.js</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:82%"></div></div><span class="skill-pct">82%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🐍</div><span class="skill-name">Django</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:75%"></div></div><span class="skill-pct">75%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🔗</div><span class="skill-name">REST APIs</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🔐</div><span class="skill-name">JWT / Auth</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:78%"></div></div><span class="skill-pct">78%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">☁️</div><span class="skill-name">Docker</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div></div>
+    <div class="skill-category reveal">
+      <div class="skill-category-header">
+        <span class="skill-cat-icon"><i class="fas fa-server"></i></span>
+        <span class="skill-cat-title">Back-End</span>
+      </div>
+      <div class="skill-tags-wrap">
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🟢</span> Node.js</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🚂</span> Express.js</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🐍</span> Django</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🔗</span> REST APIs</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🔐</span> JWT / Auth</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">☁️</span> Docker</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🔄</span> GraphQL</div>
       </div>
     </div>
 
-    <!-- Programming Languages -->
-    <div class="skill-panel d-none" id="tab-lang">
-      <div class="row g-3">
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">💛</div><span class="skill-name">JavaScript</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🐍</div><span class="skill-name">Python</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:82%"></div></div><span class="skill-pct">82%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🔷</div><span class="skill-name">TypeScript</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:78%"></div></div><span class="skill-pct">78%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">☕</div><span class="skill-name">Java</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:60%"></div></div><span class="skill-pct">60%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🅲</div><span class="skill-name">C++</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🐚</div><span class="skill-name">Bash / Shell</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:55%"></div></div><span class="skill-pct">55%</span></div></div>
+    <!-- Languages -->
+    <div class="skill-category reveal">
+      <div class="skill-category-header">
+        <span class="skill-cat-icon"><i class="fas fa-code"></i></span>
+        <span class="skill-cat-title">Languages</span>
+      </div>
+      <div class="skill-tags-wrap">
+        <div class="skill-tag-pill"><span class="skill-tag-icon">💛</span> JavaScript</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🐍</span> Python</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🔷</span> TypeScript</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">☕</span> Java</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🅲</span> C++</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🐚</span> Bash / Shell</div>
       </div>
     </div>
 
     <!-- Data & Database -->
-    <div class="skill-panel d-none" id="tab-data">
-      <div class="row g-3">
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🐘</div><span class="skill-name">PostgreSQL</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:82%"></div></div><span class="skill-pct">82%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🍃</div><span class="skill-name">MongoDB</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🔵</div><span class="skill-name">MySQL</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:80%"></div></div><span class="skill-pct">80%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🔴</div><span class="skill-name">Redis</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:65%"></div></div><span class="skill-pct">65%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">🐼</div><span class="skill-name">Pandas</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:72%"></div></div><span class="skill-pct">72%</span></div></div>
-        <div class="col-md-6 reveal"><div class="skill-item"><div class="skill-left"><div class="skill-icon">📊</div><span class="skill-name">SQL / ORM</span></div><div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div></div>
+    <div class="skill-category reveal">
+      <div class="skill-category-header">
+        <span class="skill-cat-icon"><i class="fas fa-database"></i></span>
+        <span class="skill-cat-title">Data & Database</span>
+      </div>
+      <div class="skill-tags-wrap">
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🐘</span> PostgreSQL</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🍃</span> MongoDB</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🔵</span> MySQL</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🔴</span> Redis</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">🐼</span> Pandas</div>
+        <div class="skill-tag-pill"><span class="skill-tag-icon">📊</span> SQL / ORM</div>
       </div>
     </div>
 
@@ -265,12 +276,20 @@
       <h2 class="section-title">My Projects</h2>
       <div class="section-line"></div>
     </div>
-    <div class="row g-4">
-      <!-- Project 1 -->
-      <div class="col-md-6 col-lg-4 reveal">
+
+    <!-- Filter Buttons -->
+    <div class="d-flex flex-wrap gap-2 mb-5 reveal" id="projectFilters">
+      <button class="proj-filter-btn active" data-filter="all">All</button>
+      <button class="proj-filter-btn" data-filter="frontend">Front-End</button>
+      <button class="proj-filter-btn" data-filter="backend">Back-End</button>
+      <button class="proj-filter-btn" data-filter="fullstack">Full Stack</button>
+    </div>
+
+    <div class="row g-4" id="projectsGrid">
+      <!-- Project 1 — Front-End -->
+      <div class="col-md-6 col-lg-4 reveal proj-item" data-category="frontend">
         <div class="project-card">
           <div class="project-img" style="background:linear-gradient(135deg,#0f2027,#203a43,#2c5364)">
-            <!-- <i class="fas fa-shopping-cart" style="position:relative;z-index:1;color:#00f5c4"></i> -->
             <img src="image.png" width="700px" height="200px">
           </div>
           <div class="project-body">
@@ -281,9 +300,7 @@
               <span class="project-tag">jQuery</span>
             </div>
             <h3 class="project-title">Portfolio Dashboard</h3>
-            <p class="project-desc">
-              Interactive portfolio showcasing a collection of web development projects, skills, and design work in a modern, responsive layout.
-            </p>
+            <p class="project-desc">Interactive portfolio showcasing a collection of web development projects, skills, and design work in a modern, responsive layout.</p>
             <div class="project-links">
               <a href="https://muhammedfahmy1996.github.io/My-Portfolio/" target="_blank" class="proj-link primary"><i class="fas fa-external-link-alt"></i> Live</a>
               <a href="https://github.com/muhammedfahmy1996/My-Portfolio.git" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
@@ -291,8 +308,8 @@
           </div>
         </div>
       </div>
-      <!-- Project 2 -->
-      <div class="col-md-6 col-lg-4 reveal">
+      <!-- Project 2 — Full Stack -->
+      <div class="col-md-6 col-lg-4 reveal proj-item" data-category="fullstack">
         <div class="project-card">
           <div class="project-img" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
             <i class="fas fa-comments" style="position:relative;z-index:1;color:#7b5ea7"></i>
@@ -312,8 +329,8 @@
           </div>
         </div>
       </div>
-      <!-- Project 3 -->
-      <div class="col-md-6 col-lg-4 reveal">
+      <!-- Project 3 — Full Stack -->
+      <div class="col-md-6 col-lg-4 reveal proj-item" data-category="fullstack">
         <div class="project-card">
           <div class="project-img" style="background:linear-gradient(135deg,#0d0d0d,#1a1a1a,#2d2d2d)">
             <i class="fas fa-tasks" style="position:relative;z-index:1;color:#ff6b6b"></i>
@@ -333,8 +350,8 @@
           </div>
         </div>
       </div>
-      <!-- Project 4 -->
-      <div class="col-md-6 col-lg-4 reveal">
+      <!-- Project 4 — Back-End -->
+      <div class="col-md-6 col-lg-4 reveal proj-item" data-category="backend">
         <div class="project-card">
           <div class="project-img" style="background:linear-gradient(135deg,#1f1c2c,#2a1f3d,#3a2d5c)">
             <i class="fas fa-robot" style="position:relative;z-index:1;color:#00f5c4"></i>
@@ -354,8 +371,8 @@
           </div>
         </div>
       </div>
-      <!-- Project 5 -->
-      <div class="col-md-6 col-lg-4 reveal">
+      <!-- Project 5 — Front-End -->
+      <div class="col-md-6 col-lg-4 reveal proj-item" data-category="frontend">
         <div class="project-card">
           <div class="project-img" style="background:linear-gradient(135deg,#0a2342,#126872,#1a8a77)">
             <i class="fas fa-chart-line" style="position:relative;z-index:1;color:#7b5ea7"></i>
@@ -375,8 +392,8 @@
           </div>
         </div>
       </div>
-      <!-- Project 6 -->
-      <div class="col-md-6 col-lg-4 reveal">
+      <!-- Project 6 — Full Stack -->
+      <div class="col-md-6 col-lg-4 reveal proj-item" data-category="fullstack">
         <div class="project-card">
           <div class="project-img" style="background:linear-gradient(135deg,#2c1810,#4a2c18,#6b3a1f)">
             <i class="fas fa-mobile-alt" style="position:relative;z-index:1;color:#ff6b6b"></i>
