@@ -19,21 +19,77 @@
 <!-- =================== NAVBAR =================== -->
 <nav id="navbar" class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="nav-brand" href="#home">&lt;<span>Portfolio</span>/&gt;</a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
+    <a class="nav-brand" href="#home">&lt;/<span>Portfolio</span>&gt;</a>
+
+    <!-- Custom Hamburger Button -->
+    <button class="custom-toggler" id="menuToggler" aria-label="Toggle menu">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-      <div class="d-flex flex-column flex-lg-row gap-1 gap-lg-0 mt-3 mt-lg-0">
-        <a class="nav-link-custom active" href="#home">Home</a>
-        <a class="nav-link-custom" href="#about">About</a>
-        <a class="nav-link-custom" href="#skills">Skills</a>
-        <a class="nav-link-custom" href="#projects">Projects</a>
-        <a class="nav-link-custom" href="#contact">Contact</a>
-      </div>
+
+    <!-- Desktop Menu -->
+    <div class="desktop-nav d-none d-lg-flex justify-content-end" id="navMenu">
+      <a class="nav-link-custom active" href="#home">Home</a>
+      <a class="nav-link-custom" href="#about">About</a>
+      <a class="nav-link-custom" href="#skills">Skills</a>
+      <a class="nav-link-custom" href="#projects">Projects</a>
+      <a class="nav-link-custom" href="#contact">Contact</a>
     </div>
   </div>
 </nav>
+
+<!-- =================== MOBILE MENU OVERLAY =================== -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <div class="mobile-menu-panel" id="mobilePanel">
+    <!-- Close Button -->
+    <button class="mobile-close-btn" id="menuClose">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Brand in overlay -->
+    <div class="mobile-brand">&lt;<span>Portfolio</span>/&gt;</div>
+
+    <!-- Nav Links -->
+    <nav class="mobile-nav-links">
+      <a class="mobile-nav-link" href="#home" data-num="01">
+        <span class="mob-link-num">01</span>
+        <span class="mob-link-text">Home</span>
+        <i class="fas fa-arrow-right mob-link-arrow"></i>
+      </a>
+      <a class="mobile-nav-link" href="#about" data-num="02">
+        <span class="mob-link-num">02</span>
+        <span class="mob-link-text">About</span>
+        <i class="fas fa-arrow-right mob-link-arrow"></i>
+      </a>
+      <a class="mobile-nav-link" href="#skills" data-num="03">
+        <span class="mob-link-num">03</span>
+        <span class="mob-link-text">Skills</span>
+        <i class="fas fa-arrow-right mob-link-arrow"></i>
+      </a>
+      <a class="mobile-nav-link" href="#projects" data-num="04">
+        <span class="mob-link-num">04</span>
+        <span class="mob-link-text">Projects</span>
+        <i class="fas fa-arrow-right mob-link-arrow"></i>
+      </a>
+      <a class="mobile-nav-link" href="#contact" data-num="05">
+        <span class="mob-link-num">05</span>
+        <span class="mob-link-text">Contact</span>
+        <i class="fas fa-arrow-right mob-link-arrow"></i>
+      </a>
+    </nav>
+
+    <!-- Social links -->
+    <div class="mobile-socials">
+      <a href="https://github.com/muhammedfahmy1996" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/muhammedfahmy/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://x.com/FeToo1996" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+    <!-- Decorative glow -->
+    <div class="mobile-menu-glow"></div>
+  </div>
+</div>
 
 <!-- =================== HOME =================== -->
 <section id="home">
